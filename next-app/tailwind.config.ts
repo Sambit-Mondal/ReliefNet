@@ -54,7 +54,9 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			'background-theme': '#232A2F',
+			'modal-theme': '#1A2023',
   		}
   	}
   },
