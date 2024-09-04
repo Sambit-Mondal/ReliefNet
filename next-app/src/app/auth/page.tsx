@@ -59,7 +59,7 @@ const Auth = () => {
         });
 
         toast.success('Signup successful', {
-          position: "top-right",
+          position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -70,7 +70,7 @@ const Auth = () => {
         setIsSignup(false);
       } catch (error) {
         toast.error('Signup failed: ' + (error as any).response.data.message, {
-          position: "top-right",
+          position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -80,6 +80,20 @@ const Auth = () => {
         });
       }
     } else {
+      
+      if (formData.password !== formData.confirmPassword) {
+        toast.error('Passwords do not match. Check and try again!', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        return;
+      }
+
       try {
         const response = await axios.post('/api/login', {
           email: formData.email,
@@ -92,7 +106,7 @@ const Auth = () => {
           localStorage.setItem('auth-token', token);
 
           toast.success('Login successful', {
-            position: "top-right",
+            position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -104,7 +118,7 @@ const Auth = () => {
         }
       } catch (error) {
         toast.error('Login failed: ' + (error as any).response.data.message, {
-          position: "top-right",
+          position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
