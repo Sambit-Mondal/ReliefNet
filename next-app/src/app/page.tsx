@@ -6,8 +6,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-background-theme w-full h-screen">
-      <Navbar />
-
+      Home Screen
     </div>
   );
 };

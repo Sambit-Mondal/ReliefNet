@@ -1,22 +1,29 @@
-import type { Metadata } from "next";
+'use client';
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { usePathname } from "next/navigation";
+import { metadata } from "./metadata";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "ReliefNet",
-  description: "ReliefNet is a platform that will serve as an integrated disaster management system designed to assist government agencies, NGOs, and communities in planning for, responding to, and recovering from disasters. It combines predictive analytics, real-time communication, and resource optimization to minimize risks and enhance disaster preparedness and response.",
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>{String(metadata.title)}</title>
+        <meta name="description" content={metadata.description || ""} />
+      </head>
+      <body className={inter.className}>
+        {pathname !== "/auth" && <Navbar />}
+        {children}
+      </body>
     </html>
   );
 }

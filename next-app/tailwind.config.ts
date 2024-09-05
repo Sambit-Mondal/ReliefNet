@@ -57,6 +57,7 @@ const config: Config = {
   			},
 			'background-theme': '#232A2F',
 			'modal-theme': '#1A2023',
+			'blue-theme': '#89DDFF'
   		}
   	}
   },

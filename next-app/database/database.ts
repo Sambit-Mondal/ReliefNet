@@ -8,7 +8,9 @@ const mongooseUserSchema = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, match: /.+\@.+\..+/ },
     password: { type: String, required: true, minlength: 5 },
-    phone: { type: String, required: true, length: 10 }
+    phone: { type: String, required: true, length: 10 },
+    address: { type: String },
+    image: { type: String }
 });
 
 interface IUser extends Document, z.infer<typeof UserSchema> { }

@@ -104,6 +104,7 @@ const Auth = () => {
 
           // Store the token in localStorage
           localStorage.setItem('auth-token', token);
+          localStorage.setItem('user-email', formData.email);
 
           toast.success('Login successful', {
             position: "top-center",

@@ -1,0 +1,28 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { connectDB, UserModel } from '../../../../../database/database';
+
+export async function PUT(req: NextRequest) {
+    try {
+        const { email, name, phone, address, image } = await req.json();
+
+        if (!email) {
+            return NextResponse.json({ message: 'Email is required' }, { status: 400 });
+        }
+
+        await connectDB();
+
+        const user = await UserModel.findOneAndUpdate(
+            { email }, 
+            { name, phone, address, image },
+            { new: true }
+        );
+
+        if (!user) {
+            return NextResponse.json({ message: 'User not found' }, { status: 404 });
+        }
+
+        return NextResponse.json({ message: 'Profile updated successfully' });
+    } catch (error) {
+        return NextResponse.json({ message: 'Error updating profile' }, { status: 500 });
+    }
+}
