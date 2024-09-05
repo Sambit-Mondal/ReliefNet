@@ -22,8 +22,7 @@ export async function GET(req: NextRequest) {
             name: user.name,
             email: user.email,
             phone: user.phone,
-            address: user.address,
-            image: user.image
+            address: user.address
         });
     } catch (error) {
         console.error('Profile Fetch Error:', error);

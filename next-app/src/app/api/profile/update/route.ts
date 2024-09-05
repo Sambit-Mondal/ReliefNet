@@ -3,7 +3,7 @@ import { connectDB, UserModel } from '../../../../../database/database';
 
 export async function PUT(req: NextRequest) {
     try {
-        const { email, name, phone, address, image } = await req.json();
+        const { email, name, phone, address } = await req.json();
 
         if (!email) {
             return NextResponse.json({ message: 'Email is required' }, { status: 400 });
@@ -13,7 +13,7 @@ export async function PUT(req: NextRequest) {
 
         const user = await UserModel.findOneAndUpdate(
             { email }, 
-            { name, phone, address, image },
+            { name, phone, address },
             { new: true }
         );
 
