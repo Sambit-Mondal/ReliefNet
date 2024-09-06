@@ -85,7 +85,7 @@ const Profile = () => {
     return (
         <div className='bg-background-theme w-full h-screen p-10 flex gap-10 items-center justify-center pt-24'>
             <ToastContainer />
-            <div className='w-1/3 bg-modal-theme flex items-center flex-col justify-between p-10 gap-8 rounded-md drop-shadow-md shadow-black shadow-lg border-[1px] border-blue-theme'>
+            <div className='w-1/3 bg-modal-theme flex items-center flex-col justify-between p-10 gap-8 rounded-md drop-shadow-md shadow-blue-theme shadow-lg border-[1px] border-blue-theme'>
                 <div className='flex items-center justify-center flex-col gap-3 w-full'>
                     <div className='relative'>
                         <div className='bg-black rounded-full flex items-center justify-center border-2 border-blue-theme'>
@@ -117,7 +117,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-2/3 bg-modal-theme flex items-center flex-col justify-between p-10 gap-8 rounded-md drop-shadow-md shadow-black shadow-lg border-[1px] border-blue-theme'>
+            <div className='w-2/3 bg-modal-theme flex items-center flex-col justify-between p-10 gap-8 rounded-md drop-shadow-md shadow-blue-theme shadow-lg border-[1px] border-blue-theme'>
                 <div className='w-full flex flex-col items-center justify-center gap-6 overflow-hidden overflow-y-auto'>
                     <div className='w-full'>
                         <div className='w-full flex flex-col justify-center gap-2'>
