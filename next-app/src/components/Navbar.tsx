@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from "next/navigation";
 import axios from "axios";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
     const router = useRouter();
@@ -10,25 +11,18 @@ const Navbar = () => {
     const [activeTab, setActiveTab] = useState('');
 
     useEffect(() => {
-        switch (pathname) {
-            case '/':
-                setActiveTab('Home');
-                break;
-            case '/our-services':
-                setActiveTab('Our Services');
-                break;
-            case '/key-features':
-                setActiveTab('Key Features');
-                break;
-            case '/contact-us':
-                setActiveTab('Contact Us');
-                break;
-            case '/profile':
-                setActiveTab('My Profile');
-                break;
-            default:
-                setActiveTab('');
-                break;
+        if (pathname === '/') {
+            setActiveTab('Home');
+        } else if (pathname.startsWith('/services')) {
+            setActiveTab('Our Services');
+        } else if (pathname === '/features') {
+            setActiveTab('Key Features');
+        } else if (pathname === '/contact') {
+            setActiveTab('Contact Us');
+        } else if (pathname === '/profile') {
+            setActiveTab('My Profile');
+        } else {
+            setActiveTab('');
         }
     }, [pathname]);
 
@@ -44,8 +38,15 @@ const Navbar = () => {
     return (
         <div className='text-white bg-background-theme w-full fixed top-0 flex items-center justify-between p-5 px-7 z-50'>
             <div className='text-2xl font-extrabold tracking-wider'>
-                <Link href='/'>
-                    ReliefNet
+                <Link href='/' className='flex items-center justify-center gap-3'>
+                    <Image
+                        src='/Logo.png'
+                        alt='ReliefNet'
+                        className='size-11 rounded-full'
+                        width={200}
+                        height={200}
+                    />
+                    <p>ReliefNet</p>
                 </Link>
             </div>
             <div className='flex items-center justify-center gap-10'>
@@ -60,21 +61,21 @@ const Navbar = () => {
                     <li
                         className={`nav-item cursor-pointer ${activeTab === 'Our Services' ? 'active' : ''}`}
                     >
-                        <Link href='/our-services'>
+                        <Link href='/services'>
                             Get Services
                         </Link>
                     </li>
                     <li
                         className={`nav-item cursor-pointer ${activeTab === 'Key Features' ? 'active' : ''}`}
                     >
-                        <Link href='/key-features'>
+                        <Link href='/features'>
                             Key Features
                         </Link>
                     </li>
                     <li
                         className={`nav-item cursor-pointer ${activeTab === 'Contact Us' ? 'active' : ''}`}
                     >
-                        <Link href='/contact-us'>
+                        <Link href='/contact'>
                             Contact Us
                         </Link>
                     </li>
