@@ -33,7 +33,7 @@ const resources = [
     image: '/Victim-Detection.png',
     title: 'Victim Detection',
     description: 'Utilize advanced technology to detect and locate victims in disaster-stricken areas, ensuring rapid response.',
-    url: 'http://127.0.0.1:5001'
+    url: '/services/victim-detection'
   },
   {
     image: '/Insurance-Claims.png',
