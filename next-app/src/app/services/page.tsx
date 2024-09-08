@@ -60,7 +60,7 @@ const Services = () => {
         </div>
       </div>
       <hr className='border-0 bg-blue-theme h-[1px] mt-3 mb-12' />
-      <div className='grid grid-cols-2 gap-x-20 gap-y-24'>
+      <div className='grid grid-cols-2 gap-x-20 gap-y-16'>
         {resources.map((resource, index) => (
           <Link href={resource.url} key={index}>
             <Card resource={resource} />
