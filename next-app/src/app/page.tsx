@@ -1,6 +1,5 @@
 'use client';
 import React from "react";
-import Navbar from "@/components/Navbar";
 import Prepare from "@/components/Home/Prepare";
 import Respond from "@/components/Home/Respond";
 import Rebuild from "@/components/Home/Rebuild";
