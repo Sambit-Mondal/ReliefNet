@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AnalysisBox({ predicated, state }) {
+function AnalysisBox({ predicated, state }: { predicated: any, state: any }) {
   return (
     <div className='w-2/3 rounded-md px-5 py-2 flex items-center justify-center text-white bg-modal-theme border-[1px] border-blue-theme drop-shadow-md shadow-blue-theme shadow-lg max-h-[24.7rem]'>
       {predicated ? (

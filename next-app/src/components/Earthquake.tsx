@@ -2,9 +2,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-function Earthquake({ setPredicated, setstate }) {
+function Earthquake({ setPredicated, setstate }: { setPredicated: any, setstate: any }) {
     const [earthquakeData, setEarthquakeData] = useState({ latitude: 0, longitude: 0 })
-    const handleClick = async (e) => {
+    const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const res = await axios.post("http://127.0.0.1:5001/earth", earthquakeData);
         console.log(res.data);

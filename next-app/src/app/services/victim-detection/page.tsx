@@ -4,15 +4,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function VictimDetection() {
-    const [videoFile, setVideoFile] = useState(null);
+    const [videoFile, setVideoFile] = useState<File | null>(null);
     const [downloadLink, setDownloadLink] = useState(null);
     const [isDetecting, setIsDetecting] = useState(false);
 
-    const handleFileChange = (e) => {
-        setVideoFile(e.target.files[0]);
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0] as File;
+        setVideoFile(file);
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (!videoFile) {
@@ -76,7 +77,7 @@ export default function VictimDetection() {
                         >
                             {isDetecting ? 'Detecting...' : 'Detect Victims'}
                         </button>
-                        <a href={downloadLink} className='w-full' download>
+                        <a href={downloadLink ?? ''} className='w-full' download>
                             <button
                                 className={`text-white py-2 flex items-center justify-center font-semibold rounded-md transition duration-200 ease-in-out border-2 border-blue-theme w-full ${!downloadLink ? 'opacity-40 cursor-not-allowed' : ''}`}
                                 disabled={!downloadLink}

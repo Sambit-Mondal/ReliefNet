@@ -2,7 +2,16 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Card = ({ resource }) => {
+interface CardProps {
+  resource: {
+    image: string;
+    title: string;
+    description: string;
+    url: string;
+  };
+}
+
+const Card = ({ resource }: CardProps) => {
   return (
     <div className='flex items-center justify-center gap-10 w-full p-10 border-2 border-blue-theme rounded-md transition duration-200 ease-in-out shadow-lg bg-modal-theme drop-shadow-sm shadow-blue-theme hover:drop-shadow-sm hover:shadow-2xl hover:shadow-blue-theme z-10 cursor-pointer'>
       <Image

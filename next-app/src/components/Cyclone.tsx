@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 
-function Cyclone({ setPredicated, setstate }) {
+function Cyclone({ setPredicated, setstate }: { setPredicated: any, setstate: any }) {
     const [hurriData, sethurriData] = useState({
         latitude: 0,
         longitude: 0,
@@ -15,7 +15,7 @@ function Cyclone({ setPredicated, setstate }) {
         day: 0,
     });
 
-    const handleClick = async (e) => {
+    const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const res = await axios.post('http://127.0.0.1:5001/hurri', hurriData);
         console.log(hurriData);
