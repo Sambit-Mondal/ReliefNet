@@ -39,7 +39,7 @@ const resources = [
     image: '/Insurance-Claims.png',
     title: 'Insurance Claims',
     description: 'Streamline and track insurance claims processing with transparent, blockchain-based solutions for quick settlements.',
-    url: '/services/insurance-claims'
+    url: '/services/insurance-claim'
   },
   {
     image: '/Chatbot.png',
