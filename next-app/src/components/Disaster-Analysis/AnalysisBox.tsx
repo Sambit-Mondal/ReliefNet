@@ -11,7 +11,7 @@ function AnalysisBox({ predicated, state }: { predicated: any, state: any }) {
               Earthquake Prediction
             </h1>
             <hr className='w-full border-0 h-[1px] bg-blue-theme mt-2 mb-4 sticky top-[2.5rem] z-10' />
-            <div className='overflow-y-auto max-h-[21rem] pb-12'>
+            <div className='overflow-y-auto max-h-[21rem] pb-12 scrollbar-hidden'>
               <p>The provided location has experienced an earthquake with a magnitude of <span className='text-blue-theme font-bold'>{predicated}</span>.</p>
               <p>This information is based on the latest seismic data and predictions from reliable sources. Understanding the potential magnitude of an earthquake can help in assessing the potential impact and necessary precautions.</p>
               <br />
@@ -35,7 +35,7 @@ function AnalysisBox({ predicated, state }: { predicated: any, state: any }) {
               Flood Prediction
             </h1>
             <hr className='w-full border-0 h-[1px] bg-blue-theme mt-2 mb-4 sticky top-[2.5rem] z-10' />
-            <div className='overflow-y-auto max-h-[21rem] pb-12'>
+            <div className='overflow-y-auto max-h-[21rem] pb-12 scrollbar-hidden'>
               <p>The provided location is predicted to experience flooding with a potential depth of <span className='text-blue-theme font-bold'>{predicated}</span>.</p>
               <p>This information is based on the latest flood data and predictions from reliable sources. Understanding the potential depth of a flood can help in assessing the potential impact and necessary precautions.</p>
               <br />
@@ -59,7 +59,7 @@ function AnalysisBox({ predicated, state }: { predicated: any, state: any }) {
               Cyclone Prediction
             </h1>
             <hr className='w-full border-0 h-[1px] bg-blue-theme mt-2 mb-4 sticky top-[2.5rem] z-10' />
-            <div className='overflow-y-auto max-h-[21rem] pb-12'>
+            <div className='overflow-y-auto max-h-[21rem] pb-12 scrollbar-hidden'>
               <p>The provided location is expected to experience a cyclone with a predicted wind speed of <span className='text-blue-theme font-bold'>{predicated} mph</span>.</p>
               <p>This information is based on the latest cyclone data and predictions from reliable sources. Understanding the potential severity of a cyclone can help in assessing the potential impact and necessary precautions.</p>
               <br />
@@ -84,7 +84,7 @@ function AnalysisBox({ predicated, state }: { predicated: any, state: any }) {
             ReliefNet - Prediction Model
           </h1>
           <hr className='w-full border-0 h-[1px] bg-blue-theme mt-2 mb-4 sticky top-[2.5rem] z-10' />
-          <div className='overflow-y-auto max-h-[21rem] pb-12'>
+          <div className='overflow-y-auto max-h-[21rem] pb-12 scrollbar-hidden'>
             <p>Our model uses advanced machine learning and real-time data to predict natural disasters like earthquakes, floods, and cyclones based on geographic coordinates.</p>
             <br />
             <h1 className='text-xl font-bold mt-5'>Key Features:</h1>

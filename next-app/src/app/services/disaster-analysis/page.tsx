@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import LeftBox from '../../../components/LeftBox';
-import Chatbot from '../../../components/Chatbot';
-import AnalysisBox from '../../../components/AnalysisBox';
+import LeftBox from '../../../components/Disaster-Analysis/LeftBox';
+import AnalysisBox from '../../../components/Disaster-Analysis/AnalysisBox';
 
 const DisasterAnalysis = () => {
   const [predicated, setPredicated] = useState("");

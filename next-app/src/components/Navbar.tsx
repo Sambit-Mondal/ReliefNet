@@ -15,8 +15,6 @@ const Navbar = () => {
             setActiveTab('Home');
         } else if (pathname.startsWith('/services')) {
             setActiveTab('Our Services');
-        } else if (pathname === '/features') {
-            setActiveTab('Key Features');
         } else if (pathname === '/contact') {
             setActiveTab('Contact Us');
         } else if (pathname === '/profile') {
@@ -63,13 +61,6 @@ const Navbar = () => {
                     >
                         <Link href='/services'>
                             Get Services
-                        </Link>
-                    </li>
-                    <li
-                        className={`nav-item cursor-pointer ${activeTab === 'Key Features' ? 'active' : ''}`}
-                    >
-                        <Link href='/features'>
-                            Key Features
                         </Link>
                     </li>
                     <li

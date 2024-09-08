@@ -95,7 +95,7 @@ export default function VictimDetection() {
                         Workflow: YOLO Algorithm
                     </h1>
                     <hr className='w-full border-0 h-[1px] bg-blue-theme mt-2 mb-4 sticky top-[2.5rem] z-10' />
-                    <div className='overflow-y-auto max-h-[21rem] pb-12'>
+                    <div className='overflow-y-auto max-h-[21rem] pb-12 scrollbar-hidden'>
                         <p>In this scenario, the YOLO (You Only Look Once) algorithm is used to detect victims in video footage during disaster situations. Here’s a step-by-step breakdown of how the process works.</p>
                         <br />
                         <h1 className='text-xl font-bold mt-5'>Step-by-Step Breakdown:</h1>

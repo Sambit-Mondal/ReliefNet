@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { usePathname } from "next/navigation";
 import { metadata } from "./metadata";
-import Chatbot from "@/components/Chatbot";
+import Chatbot from "@/components/Disaster-Analysis/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
