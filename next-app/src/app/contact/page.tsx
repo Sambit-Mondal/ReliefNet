@@ -51,9 +51,9 @@ const resources = [
     {
         name: 'Vikramaditya Singh',
         designation: 'AI/ML Developer',
-        github: 'https://github.com/',
+        github: 'https://github.com/sparecoder',
         linkedin: 'https://www.linkedin.com/in/vikramaditya-singh-376bab247/',
-        gmail: '@gmail.com'
+        gmail: 'vikramadityasingh342@gmail.com'
     },
     {
         name: 'Ankit Kumar',
@@ -65,7 +65,7 @@ const resources = [
     {
         name: 'Tanisha Basu',
         designation: 'AI/ML Developer',
-        github: 'https://github.com/',
+        github: 'https://github.com/t-abs',
         linkedin: 'https://www.linkedin.com/in/tanisha-basu-870b31252/',
         gmail: 'basutanisha1@gmail.com'
     },
@@ -73,7 +73,7 @@ const resources = [
         name: 'Adarsh Rout',
         designation: 'AI/ML Developer',
         github: 'https://github.com/AdarshRout',
-        linkedin: 'https://www.linkedin.com/in/',
+        linkedin: 'https://www.linkedin.com/in/adarsh-rout-only568/',
         gmail: 'adarshrout321@gmail.com'
     },
     {

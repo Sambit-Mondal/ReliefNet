@@ -8,7 +8,6 @@ const DisasterAnalysis = () => {
   const [state, setstate] = useState(0);
   const [activeDisaster, setActiveDisaster] = useState('earthquake');
 
-  // Resetting predicated and state when changing tabs
   const resetAnalysis = () => {
     setPredicated("");
     setstate(0);
